@@ -23,8 +23,7 @@ h1 {
     margin: 0 auto;
 }
 .header {
-    /* flex: 1 0 144px; */
-    /* flex-shrink: 0; */
+    min-height: 144px;
 }
 .menu {
 }
@@ -49,11 +48,9 @@ h1 {
 }
 
 .welcome-section__container {
-    /* height: 100%;
+    flex-grow: 1;
     display: flex;
-    align-items: center; */
-    /* flex-grow: 1; */
-    
+    align-items: center;
 }
 .welcome-section__inner {
 }
