@@ -10,9 +10,13 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
-/* .title {
-
+.title {
+    font-size: 150px;
 }
+/*
+.button {
+}
+
 .text {
 
 } */
@@ -98,7 +102,12 @@ h1, h2, h3 {
 .button_outline {
     background: transparent;
     border: 3px solid #000;
-
+    /* box-sizing: border-box; */
+    display: block;
+}
+.button_black {
+    background-color: #010509;
+    color: #FFF;
 }
 .welcome-section__button {
     border-color: #FFF;
@@ -118,7 +127,6 @@ h1, h2, h3 {
 }
 
 .about-me__title {
-    font-size: 150px;
 }
 .about-me__text {
     font-size: 22px;
@@ -132,3 +140,45 @@ h1, h2, h3 {
 .about-me__img img {
     display: block;
 }
+
+.projects {
+    margin-bottom: 150px;
+}
+.projects__container {
+}
+.title {
+}
+.projects__title {
+    text-align: center;
+    margin-bottom: 58px;
+}
+.projects__inner {
+    display: flex;
+    gap: 30px;
+}
+
+.projects__item {
+    flex-basis: 33.333%;
+}
+.projects-card {
+    border: 1.5px solid #D9D9D9;
+}
+.projects-card__body {
+    padding: 0 22px 34px 22px;
+}
+.projects-card__img {
+    height: 282px;
+    background-color: #adadad;
+}
+.projects-card__title {
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+.projects-card__text {
+    margin-bottom: 17px;
+}
+.projects-card__buttons {
+    display: flex;
+    gap: 15px;
+}
+
