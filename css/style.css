@@ -6,6 +6,65 @@ body {
 
 h1 {
     font-family: "Anton", sans-serif;
-    font-size: 288px;
+
     text-transform: uppercase;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.container {
+    max-width: 1440px;
+    width: 100%;
+    padding: 0 36px;
+    margin: 0 auto;
+}
+.header {
+    /* flex: 1 0 144px; */
+    /* flex-shrink: 0; */
+}
+.menu {
+}
+.menu__list {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    gap: 33px;
+    min-height: 144px;
+}
+.menu__item {
+}
+.menu__link {
+    vertical-align: baseline;
+}
+.section {
+}
+.welcome-section {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.welcome-section__container {
+    /* height: 100%;
+    display: flex;
+    align-items: center; */
+    /* flex-grow: 1; */
+    
+}
+.welcome-section__inner {
+}
+.welcome-section__title {
+    line-height: 250px;
+    vertical-align: middle;
+    font-size: 288px;
+}
+.welcome-section__text {
+}
+.button {
+}
+.welcome-section__button {
 }
