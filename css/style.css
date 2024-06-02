@@ -1,12 +1,12 @@
 body {
     font-family: "Roboto Mono", monospace;
+    font-size: 18px;
     margin: 0;
     padding: 0;
 }
 
-h1 {
+h1, h2, h3 {
     font-family: "Anton", sans-serif;
-
     text-transform: uppercase;
 }
 
@@ -45,23 +45,43 @@ h1 {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #000;
+    color: #FFF;
 }
 
 .welcome-section__container {
     flex-grow: 1;
     display: flex;
     align-items: center;
+    max-width: 1750px;
+    padding: 0 60px;
+    box-sizing: content-box;
 }
 .welcome-section__inner {
 }
 .welcome-section__title {
-    line-height: 250px;
+    line-height: 270px;
     vertical-align: middle;
     font-size: 288px;
+    margin-bottom: 28px;
 }
 .welcome-section__text {
+    max-width: 950px;
+    margin-bottom: 22px;
 }
 .button {
+    padding: 20px 35px;
+    font-family: "Anton", sans-serif;
+    text-transform: uppercase;
+    line-height: 26px;
+    font-size: 30px;
+}
+.button_outline {
+    background: transparent;
+    border: 3px solid #000;
+
 }
 .welcome-section__button {
+    border-color: #FFF;
+    color: #FFF;
 }
