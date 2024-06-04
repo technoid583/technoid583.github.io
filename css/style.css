@@ -13,13 +13,30 @@ h1, h2, h3 {
 .title {
 	font-size: 150px;
 }
-/*
+@media (max-width: 1200px) {
+	.title {
+		font-size: calc(80px + (140 - 80) * ((100vw - 320px) / (1070 - 320)));
+	}	
+}
+
 .button {
+}
+@media (max-width: 1200px) {
+	.button {
+		font-size: 21px !important;
+		line-height: 18px !important;
+	}
 }
 
 .text {
-
-} */
+}
+@media (max-width: 1200px) {
+	.text {
+		font-size: 16px !important;
+	}
+}
+.text {
+}
 
 .wrapper {
 	width: 100%;
@@ -36,6 +53,8 @@ h1, h2, h3 {
 .header {
 	min-height: 144px;
 	z-index: 2;
+	display: flex;
+	align-items: center;
 }
 .menu {
 }
@@ -44,15 +63,17 @@ h1, h2, h3 {
 	justify-content: right;
 	align-items: center;
 	gap: 33px;
-	min-height: 144px;
 }
 .menu__item {
 }
 .menu__link {
+	font-size: 16px;
 	vertical-align: baseline;
 }
 .section {
 	padding-bottom: 150px;
+	padding-bottom: calc(80px + (150 - 80) * ((100vw - 320px) / (1070 - 320)))
+
 }
 .welcome-section {
 	min-height: 100vh;
@@ -60,7 +81,7 @@ h1, h2, h3 {
 	flex-direction: column;
 	/* background-color: #000; */
 	color: #FFF;
-	margin-bottom: 150px;
+	margin-bottom: 100px;
 	position: relative;
 	overflow: hidden;
 }
@@ -84,10 +105,14 @@ h1, h2, h3 {
 	display: flex;
 	align-items: center;
 	max-width: 1750px;
-	padding: 0 60px;
-	box-sizing: content-box;
+	padding-left: 60px;
 	position: relative;
 	z-index: 2;
+}
+@media (max-width: 1200px) {
+	.welcome-section__container {
+		padding-left: calc(20px + (60 - 20) * ((100vw - 320px) / (1070 - 320)))
+	}	
 }
 .welcome-section::before {
 	content: '';
@@ -99,6 +124,12 @@ h1, h2, h3 {
 	background-image: url("../img/arrow.svg");
 	z-index: 2;
 }
+@media (max-width: 992px) {
+	.welcome-section::before {
+		display: none;
+	}
+}
+
 .welcome-section::after {
 	content: '';
 	position: absolute;
@@ -120,7 +151,7 @@ h1, h2, h3 {
 }
 @media (max-width: 1200px) {
 	.welcome-section__title {
-		font-size: calc(80px + (180 - 80) * ((100vw - 320px) / (1070 - 320)));
+		font-size: calc(80px + (200 - 80) * ((100vw - 320px) / (1070 - 320)));
 	}	
 }
 /* @media (max-width: 968px) {
@@ -155,18 +186,30 @@ h1, h2, h3 {
 	background-color: #010509;
 	color: #FFF;
 }
+.button:hover {
+	text-decoration: underline;
+}
+/* .button_black:hover, .button_black:focus {
+	background-color: #4D4D4D;
+	color: #FFF;	
+} */
 .welcome-section__button {
 	border-color: #FFF;
 	color: #FFF;
 }
 
 .about-me-section {
-	margin-bottom: 150px;
+	/* margin-bottom: 150px; */
 }
 .about-me__container {
 }
 .about-me__inner {
 	display: flex;
+}
+@media (max-width: 992px) {
+	.about-me__inner {
+		flex-direction: column;	
+	}
 }
 .about-me__text-wrapper {
 	padding-right: 35px;
@@ -176,20 +219,35 @@ h1, h2, h3 {
 .about-me__title {
 }
 .about-me__text {
-	font-size: 22px;
+	font-size: 21px;
 	line-height: auto;
 	margin-bottom: 12px; /* Dont forget to adjust margin, if indeed */
 }
 
 .about-me__img {
-}
+	/* flex-basis: 496px;
+	flex-shrink: 1; */
 
+	display: flex;
+	justify-content: end;
+}
+@media (max-width: 992px) {
+	.about-me__img {
+		background-color: #010509;
+
+	}
+}
 .about-me__img img {
 	display: block;
 }
+@media (max-width: 1200px) {
+	.about-me__img img  {
+		width: calc(200px + (400 - 200) * ((100vw - 320px) / (1070 - 320)));
+	}
+}
 
 .projects {
-	margin-bottom: 150px;
+	/* margin-bottom: 150px; */
 }
 .projects__container {
 	/* box-sizing: content-box; */
@@ -273,7 +331,16 @@ h1, h2, h3 {
 }
 .contact-me__buttons {
 	display: flex;
-	gap: 49px;
+	flex-wrap: wrap;
+	gap: 10px;
+	justify-content: space-evenly;
+	max-width: 792px;
+	width: 100%;
+}
+@media (max-width: 718px) {
+	.contact-me__buttons {
+		flex-direction: column;
+	}
 }
 .footer {
 	border-top: 1px solid #000;
@@ -281,13 +348,27 @@ h1, h2, h3 {
 .footer__container {
 	max-width: 1750px;
 	display: flex;
-	align-items: center;
 	justify-content: space-between;
+	gap: 20px;
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+@media (max-width: 992px) {
+	.footer__container {
+		flex-direction: column-reverse;
+		gap: 40px;
+	}
 }
 .footer__copyright {
 	font-size: 18px;
 }
+@media (max-width: 992px) {
+	.footer__copyright {
+		color: #adadad;
+	}
+}
 .menu {
 }
 .footer__menu {
+	flex-shrink: 0;
 }
