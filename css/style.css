@@ -57,6 +57,7 @@ h1, h2, h3 {
 	align-items: center;
 }
 .menu {
+	/* position: sticky; */
 }
 .menu__list {
 	display: flex;
